@@ -1,0 +1,57 @@
+{
+  "name": "npm-package-template",
+  "version": "1.0.0",
+  "description": "A template for creating NPM packages. Comes with linting, prettier and Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "env-cmd --fallback .env.example jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrchief/npm-package-template.git"
+  },
+  "keywords": [
+    "npm",
+    "template",
+    "prettier",
+    "lint",
+    "jest"
+  ],
+  "author": "Hrusikesh Panda <mrchief_2000@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrchief/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/mrchief/npm-package-template#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "env-cmd": "^9.0.3",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.0.0"
+  }
+}
