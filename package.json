@@ -1,6 +1,6 @@
 {
   "name": "conventional-commits-pattern-filter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Filter commits by pattern, not just reverted ones",
   "main": "index.js",
   "files": [
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrchief/npm-package-template.git"
+    "url": "git+https://github.com/mrchief/conventional-commits-pattern-filter.git"
   },
   "keywords": [
     "conventional",
@@ -24,9 +24,9 @@
   "author": "Hrusikesh Panda <mrchief_2000@yahoo.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrchief/npm-package-template/issues"
+    "url": "https://github.com/mrchief/conventional-commits-pattern-filter/issues"
   },
-  "homepage": "https://github.com/mrchief/npm-package-template#readme",
+  "homepage": "https://github.com/mrchief/conventional-commits-pattern-filter#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
