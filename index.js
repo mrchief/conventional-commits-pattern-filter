@@ -1,4 +1,4 @@
-function filter({ commits, field, pattern }) {
+function filter({ commits, field, pattern, include = false }) {
   if (!Array.isArray(commits)) {
     throw new TypeError('commits should be an array')
   }
@@ -14,8 +14,9 @@ function filter({ commits, field, pattern }) {
   const isRegex = Object.prototype.toString.call(pattern) === '[object RegExp]'
 
   const re = isRegex ? pattern : new RegExp(pattern)
+  const fields = Array.isArray(field) ? field : [field]
 
-  return commits.filter(commit => !re.test(commit[field]))
+  return commits.filter(commit => fields.some(f => (include ? re.test(commit[f]) : !re.test(commit[f]))))
 }
 
 module.exports = filter

@@ -59,6 +59,12 @@ Say you want to extract breaking changes only so that you can share it with stak
 const breakingChanges = filter({ commits, field: 'body', pattern: /^((?!BREAKING CHANGE).)*/igm })
 ```
 
+Alternatively, if negative lookahead is not your thing, you can use the `include` flag to include matching commits:
+
+```
+const breakingChanges = filter({ commits, field: 'body', pattern: /BREAKING CHANGE/igm, include: true })
+```
+
 ## Install
 
 ```
@@ -109,7 +115,7 @@ Type: `array`
 
 Array of parsed commits returned by [conventional-commits-parser](https://www.npmjs.com/package/conventional-commits-parser)
 
-The `commit` object has the follwing structure:
+The `commit` object has the following structure:
 
 ```
 { type: 'feat',
@@ -133,9 +139,13 @@ The `commit` object has the follwing structure:
 
 #### field
 
-Type: `string`
+Type: `string` or `array`
 
-Field to filter on. Can be the name of any valid property/key on the `commit` object from `commits` array.
+Field(s) to filter on. Can be the name of any valid property/key on the `commit` object from `commits` array.
+
+```
+filter({ commits, field: ['subject', 'body'], pattern: '[excludeMe]' })
+```
 
 Note: Currently only supports simple properties. Send me a PR if you need any deep filtering!
 
@@ -144,6 +154,12 @@ Note: Currently only supports simple properties. Send me a PR if you need any de
 Type: `string` or `regex`
 
 The pattern to filter commits. Any matching commit will be excluded.
+
+#### include
+
+Type: `boolean`
+
+If true, **includes** matching commits instead of excluding them.
 
 ## License
 
