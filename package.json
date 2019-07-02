@@ -1,10 +1,10 @@
 {
-  "name": "npm-package-template",
+  "name": "conventional-commits-pattern-filter",
   "version": "1.0.0",
-  "description": "A template for creating NPM packages. Comes with linting, prettier and Jest",
+  "description": "Filter commits by pattern, not just reverted ones",
   "main": "index.js",
   "scripts": {
-    "test": "env-cmd --fallback .env.example jest --coverage"
+    "test": "env-cmd -f .env.example jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "lint-staged": "^9.0.0"
+    "lint-staged": "^9.0.0",
+    "prettier": "^1.18.2"
   }
 }
