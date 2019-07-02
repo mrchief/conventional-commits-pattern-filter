@@ -2,7 +2,7 @@
 
 Filter commits by pattern, not just reverted ones
 
-[![install size](https://packagephobia.now.sh/badge?p=conventional-commits-pattern-filter)](https://packagephobia.now.sh/result?p=conventional-commits-pattern-filter) ![npm](https://img.shields.io/npm/v/conventional-commits-pattern-filter.svg)
+[![install size](https://packagephobia.now.sh/badge?p=conventional-commits-pattern-filter)](https://packagephobia.now.sh/result?p=conventional-commits-pattern-filter) [![npm](https://img.shields.io/npm/v/conventional-commits-pattern-filter.svg)](https://www.npmjs.com/package/conventional-commits-pattern-filter)
 
 ## Install
 
