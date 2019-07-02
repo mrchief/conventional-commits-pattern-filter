@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Filter commits by pattern, not just reverted ones",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "env-cmd -f .env.example jest --coverage"
   },
