@@ -1,6 +1,6 @@
 {
   "name": "conventional-commits-pattern-filter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Filter commits by pattern, not just reverted ones",
   "main": "index.js",
   "files": [
@@ -14,11 +14,12 @@
     "url": "git+https://github.com/mrchief/npm-package-template.git"
   },
   "keywords": [
-    "npm",
-    "template",
-    "prettier",
-    "lint",
-    "jest"
+    "conventional",
+    "commits",
+    "filter",
+    "conventional-cmmits",
+    "conventional-changelog",
+    "conventional-commits-pattern-filter"
   ],
   "author": "Hrusikesh Panda <mrchief_2000@yahoo.com>",
   "license": "MIT",
